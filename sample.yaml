@@ -1,0 +1,6 @@
+- name: sample ansible file
+  host: frontend
+  tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+  
