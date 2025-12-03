@@ -1,6 +1,6 @@
 - name: variables at playlevel
   hosts: local
-  connections: local
+  connection: local
   vars:
     COURSENAME: devops
     DURATION: 10hrs
