@@ -1,4 +1,4 @@
-- name: executing loops
+- name: INSTALL PACKAGES
   hosts: frontend
   become: yes
   tasks:
