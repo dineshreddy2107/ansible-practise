@@ -1,0 +1,8 @@
+- name: installing nginx web server
+  hosts: nginx
+  become: yes
+  tasks:
+  - name: disabling nginx
+    ansible.builtin.dnf:
+     name: nginx
+     state: disabled
