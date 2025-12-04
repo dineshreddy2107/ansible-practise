@@ -5,5 +5,5 @@
   - name: disabling enginx
     ansible.builtin.dnf:
       name: nginx
-      state: disable
+      state: absent
      
