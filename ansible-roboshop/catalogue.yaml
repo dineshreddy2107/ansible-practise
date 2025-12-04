@@ -22,18 +22,18 @@
 
   - name: create app directory
     ansible.builtin.file:
-     path: /app
-     state: directory
+      path: /app
+      state: directory
 
   - name: downloding the catalogue code
     ansible.bulitin.get_url:
-     url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
-     dest: "/tmp/catalogue.zip"
+      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
+      dest: "/tmp/catalogue.zip"
 
   - name: unziping the catalofue ansible.builtin.file
     ansible.builtin.unarchive:
-     src: "/tmp/catalogue.zip"
-     dest: "/app"
+      src: "/tmp/catalogue.zip"
+      dest: "/app"
 
    
 
