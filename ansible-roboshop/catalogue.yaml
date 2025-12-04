@@ -13,6 +13,13 @@
      name: nodejs
      state: present
 
+  - name: create app directory
+    ansible.builtin.file:
+      path: /app
+      state: directory
+      owner: roboshop
+      group: roboshop
+
   - name: create roboshop system user
     ansible.builtin.user:
       name: roboshop
@@ -21,12 +28,7 @@
       home: /app
       create_home: yes
 
-  - name: create app directory
-    ansible.builtin.file:
-      path: /app
-      state: directory
-      owner: roboshop
-      group: roboshop
+ 
 
   - name: downloding the catalogue code
     ansible.builtin.get_url:
