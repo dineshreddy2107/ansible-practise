@@ -40,18 +40,14 @@
       dest: /usr/share/nginx/html
       remote_src: yes
 
-  - name: remove default nginx configuration
-    ansible.builtin.file:
-      path: /etc/nginx/nginx.conf
-      state: absent
-
+  
   - name: copy roboshop nginx configuration
     ansible.builtin.copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
 
   - name: restart nginx
-    ansible.builtin.command: systemctl restart nginx 
-     # name: nginx
-      #state: restarted
+    ansible.builtin.service:
+      name: nginx
+      state: restarted
 
