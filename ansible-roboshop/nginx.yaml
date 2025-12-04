@@ -1,5 +1,5 @@
 - name: installing nginx web server
-  hosts: nginx
+  hosts: frontend
   become: yes
   tasks:
   - name: disabling nginx
