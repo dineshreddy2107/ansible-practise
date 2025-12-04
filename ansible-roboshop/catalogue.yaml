@@ -1,0 +1,9 @@
+- name: configure catalogue component
+  hosts: catalogue
+  become: yes
+  tasks:
+  - name: disabling enginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: disable
+     
